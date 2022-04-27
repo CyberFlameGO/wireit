@@ -235,7 +235,9 @@ export class DefaultLogger implements Logger {
           }
           case 'running': {
             console.log(
-              `🏃${prefix} Running command "${event.script.command ?? ''}"`
+              `🏃${prefix} Running command "${
+                event.script.command?.value ?? ''
+              }"`
             );
             break;
           }
